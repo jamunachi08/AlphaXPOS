@@ -18,10 +18,10 @@ after_install = "alphax_pos_suite.alphax_pos_suite.install.after_install"
 
 doc_events = {
     "Sales Invoice": {
-        "validate": "alphax_pos_suite.alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_validate",
-        "before_submit": "alphax_pos_suite.alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_before_submit",
+        "validate": "alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_validate",
+        "before_submit": "alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_before_submit",
         "on_submit": [
-            "alphax_pos_suite.alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_on_submit",
+            "alphax_pos_suite.alphax_pos_suite.integrations.card_capture.sales_invoice_on_submit",
             "alphax_pos_suite.alphax_pos_suite.pos.processing.on_sales_invoice_submit",
         ]
     },

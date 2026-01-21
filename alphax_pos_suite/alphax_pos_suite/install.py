@@ -23,7 +23,11 @@ def _safe_insert(doc_dict):
     try:
         frappe.get_doc(doc_dict).insert(ignore_permissions=True)
     except Exception:
-        frappe.log_error(frappe.get_traceback(), title=f"AlphaX POS install: failed inserting {doc_dict.get('doctype')}")
+        frappe.log_error(
+    title=f"AlphaX POS install: failed inserting {doc_dict.get('doctype')}",
+    message=frappe.get_traceback()
+)
+
 
 
 def create_roles():
