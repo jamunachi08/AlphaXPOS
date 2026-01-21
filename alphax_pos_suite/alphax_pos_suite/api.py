@@ -15,7 +15,7 @@ def redeem_credit_note(credit_note, invoice, amount=None):
 import frappe
 from frappe import _
 import json
-from alphax_pos_suite.integrations.erpnext_stock import create_material_request_from_ck_request, create_stock_entry_from_ck_request
+from alphax_pos_suite.alphax_pos_suite.integrations.erpnext_stock import create_material_request_from_ck_request, create_stock_entry_from_ck_request
 
 
 @frappe.whitelist()

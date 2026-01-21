@@ -1,6 +1,6 @@
 import frappe
 from frappe.model.document import Document
-from alphax_pos_suite.integrations.erpnext_stock import create_material_request_from_ck_request, create_stock_entry_from_ck_request, is_erpnext_available
+from alphax_pos_suite.alphax_pos_suite.integrations.erpnext_stock import create_material_request_from_ck_request, create_stock_entry_from_ck_request, is_erpnext_available
 
 class AlphaxPosCentralKitchenRequest(Document):
     def after_insert(self):
