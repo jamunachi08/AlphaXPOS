@@ -1,0 +1,1 @@
+alphax_pos_suite.alphax_pos_suite.patches.v15_0.fix_child_tables_parent_columns

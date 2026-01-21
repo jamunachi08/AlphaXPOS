@@ -1,0 +1,139 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX POS Outlet",
+  "module": "AlphaX POS Suite",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 0,
+  "autoname": "hash",
+  "engine": "InnoDB",
+  "allow_rename": 0,
+  "fields": [
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "reqd": 1,
+      "in_list_view": 1,
+      "read_only": 0,
+      "options": "Company"
+    },
+    {
+      "fieldname": "branch",
+      "label": "Branch",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 1,
+      "read_only": 0,
+      "options": "Branch"
+    },
+    {
+      "fieldname": "warehouse",
+      "label": "Default Warehouse",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Warehouse"
+    },
+    {
+      "fieldname": "cost_center",
+      "label": "Default Cost Center",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Cost Center"
+    },
+    {
+      "fieldname": "update_stock",
+      "label": "Update Stock on POS Posting",
+      "fieldtype": "Check",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "default": 1
+    },
+    {
+      "fieldname": "sales_taxes_and_charges_template",
+      "label": "Sales Taxes and Charges Template",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Sales Taxes and Charges Template"
+    },
+    {
+      "fieldname": "pos_type",
+      "label": "POS Type (Override)",
+      "fieldtype": "Select",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Use Global\nRestaurant\nRetail\nPharmacy\nElectronics\nGeneric",
+      "default": "Use Global"
+    },
+    {
+      "fieldname": "enable_kds",
+      "label": "Enable KDS (Override)",
+      "fieldtype": "Select",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Use Global\nYes\nNo",
+      "default": "Use Global"
+    },
+    {
+      "fieldname": "service_charge_item",
+      "label": "Service Charge Item",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Item"
+    },
+    {
+      "fieldname": "tips_item",
+      "label": "Tips Item",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Item"
+    },
+    {
+      "fieldname": "default_price_list",
+      "label": "Default Selling Price List",
+      "fieldtype": "Link",
+      "reqd": 0,
+      "in_list_view": 0,
+      "read_only": 0,
+      "options": "Price List"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "AlphaX POS Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "AlphaX POS Supervisor",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "description": "Outlet configuration: company/branch/warehouse defaults.",
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

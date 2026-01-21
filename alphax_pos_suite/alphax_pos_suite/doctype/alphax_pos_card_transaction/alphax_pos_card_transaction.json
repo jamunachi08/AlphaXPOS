@@ -1,0 +1,135 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX POS Card Transaction",
+  "module": "AlphaX POS Suite",
+  "custom": 0,
+  "is_table": 0,
+  "editable_grid": 0,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Approved\nDeclined\nError\nCancelled",
+      "default": "Approved",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount",
+      "label": "Amount",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "currency",
+      "label": "Currency",
+      "fieldtype": "Link",
+      "options": "Currency"
+    },
+    {
+      "fieldname": "sales_invoice",
+      "label": "Sales Invoice",
+      "fieldtype": "Link",
+      "options": "Sales Invoice",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pos_order",
+      "label": "POS Order",
+      "fieldtype": "Link",
+      "options": "AlphaX POS Order"
+    },
+    {
+      "fieldname": "mode_of_payment",
+      "label": "Mode of Payment",
+      "fieldtype": "Link",
+      "options": "Mode of Payment",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "auth_code",
+      "label": "Auth Code",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rrn",
+      "label": "RRN",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "trace_no",
+      "label": "Trace/Stan",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "batch_no",
+      "label": "Batch No",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "card_brand",
+      "label": "Card/Tender Brand",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "masked_pan",
+      "label": "Masked PAN (Last4)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "terminal_id",
+      "label": "Terminal ID (TID)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "merchant_id",
+      "label": "Merchant ID (MID)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "response_code",
+      "label": "Response Code",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "response_message",
+      "label": "Response Message",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "raw_response",
+      "label": "Raw Response (JSON)",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1
+    },
+    {
+      "role": "POS Manager",
+      "read": 1
+    },
+    {
+      "role": "POS Supervisor",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

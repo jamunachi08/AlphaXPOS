@@ -1,0 +1,34 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX POS Floor",
+  "module": "AlphaX POS Suite",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "field:floor_name",
+  "is_submittable": 0,
+  "fields": [
+    {
+      "fieldname": "floor_name",
+      "label": "Floor Name",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": "1"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1
+    }
+  ]
+}

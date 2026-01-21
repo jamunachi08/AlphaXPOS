@@ -1,0 +1,54 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX POS Table",
+  "module": "AlphaX POS Suite",
+  "custom": 0,
+  "istable": 0,
+  "autoname": "field:table_code",
+  "is_submittable": 0,
+  "fields": [
+    {
+      "fieldname": "table_code",
+      "label": "Table Code",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "floor",
+      "label": "Floor",
+      "fieldtype": "Link",
+      "options": "AlphaX POS Floor"
+    },
+    {
+      "fieldname": "seats",
+      "label": "Seats",
+      "fieldtype": "Int",
+      "default": "2"
+    },
+    {
+      "fieldname": "shape",
+      "label": "Shape",
+      "fieldtype": "Select",
+      "options": "Rectangle\nCircle",
+      "default": "Rectangle"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Free\nOccupied\nReserved\nDirty\nDisabled",
+      "default": "Free"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1,
+      "cancel": 1
+    }
+  ]
+}
